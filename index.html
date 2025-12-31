@@ -46,19 +46,22 @@
         document.cookie = "1239_ram=1239";
     </script>
 
-    <script>
-    (function () {
-        var s = document.createElement('script');
-        s.src = 'https://cdn-qa.securiti.xyz/consent/cookie-consent-sdk-loader.js';
-        s.setAttribute('data-tenant-uuid', 'a7704d5e-47c2-4322-ab93-32f05a398b96');
-        s.setAttribute('data-domain-uuid', '70bc5b1d-efc2-4ae8-80c3-5f29c2a8a733');
-        s.setAttribute('data-backend-url', 'https://qa.securiti.xyz');
-        s.setAttribute('data-skip-css', 'false');
-        s.defer = true;
-        var parent_node = document.head || document.body;
-        parent_node.appendChild(s);
-    })()
-    </script>
+
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-qa.securiti.xyz/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'a7704d5e-47c2-4322-ab93-32f05a398b96');
+	s.setAttribute('data-domain-uuid', '76c9d4e0-96c8-4621-857e-73cef565f3a6');
+	s.setAttribute('data-backend-url', 'https://qa.securiti.xyz');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script>
+
 </head>
 <body>
 
@@ -90,3 +93,5 @@
     
 </body>
 </html>
+
+
