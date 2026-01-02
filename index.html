@@ -74,22 +74,23 @@
 
     <div style="width: 100%; margin-top: 20px;">
         <iframe 
-            src="https://dsp-qa.securiti.xyz/dsr-embed/bded70a4-44c4-410e-88c4-9f2c41586fba" 
+            src="https://dsp-qa.securiti.xyz/dsr-embed/c561a305-cd27-4a61-9d88-258a7ceed3f3" 
             style="border: none; width: 100%; height: 800px;"
             title="DSR Form">
         </iframe>
     </div>
 
-    <script>
-        window.addEventListener('message', (event) => {
-            if (event.data.sec_signal_identifier === 'sec-dsr-submission-success') {
-                console.log('DSR Submission Success Signal Received',event.data);
-                if (window.SecuritiSDK && typeof bannerGenerator !== 'undefined' && (event.data.sec_dsr_data.ticket_type||[]).includes('do-not-sell')) {
-                    bannerGenerator.setDoNotSellConsent();
-                }
-            }
-        });
-    </script>
+// Add this script just before </body> tag
+<script>
+window.addEventListener('message', (event) => {
+    if (event.data.sec_signal_identifier === 'sec-dsr-submission-success') {
+        // Process message
+        if (window.SecuritiSDK && bannerGenerator && (event.data.sec_dsr_data.ticket_type||[]).includes('do-not-sell')) {
+            bannerGenerator.setDoNotSellConsent()
+        }
+    }
+});
+</script>
     
 </body>
 </html>
