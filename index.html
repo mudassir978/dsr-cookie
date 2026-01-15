@@ -48,14 +48,15 @@
 
 
 
+
 <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
 <script>
 (function () {
 	var s = document.createElement('script');
-	s.src = 'https://cdn-qa.securiti.xyz/consent/cookie-consent-sdk-loader.js';
-	s.setAttribute('data-tenant-uuid', 'aa2b1a1b-c473-4edd-b1ea-bba0ee2ebf5a');
-	s.setAttribute('data-domain-uuid', '109fbd47-400c-4a1f-83b6-9dd39b695cd6');
-	s.setAttribute('data-backend-url', 'https://qa.securiti.xyz');
+	s.src = 'https://cdn-prod.eu.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', '299e598b-eed3-4d9d-91f5-f4eff948fcb0');
+	s.setAttribute('data-domain-uuid', '09aa59e9-a0b1-4a7c-9f99-db4de84047fe');
+	s.setAttribute('data-backend-url', 'https://app.eu.securiti.ai');
 	s.setAttribute('data-skip-css', 'false');
 	s.defer = true;
 	var parent_node = document.head || document.body;
@@ -75,7 +76,7 @@
 
     <div style="width: 100%; margin-top: 20px;">
         <iframe 
-            src="https://dsp-qa.securiti.xyz/dsr-embed/1571e806-e031-43fe-807c-29796291f163" 
+            src="https://privacy-central.eu.securiti.ai/dsr-embed/2b7958e1-b0bb-4573-b5f7-68b7b13ce76f" 
             style="border: none; width: 100%; height: 800px;"
             title="DSR Form">
         </iframe>
